@@ -1,5 +1,7 @@
 package com.yhyr.Algorithm;
 
+import com.yhyr.Model.ListNode;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -22,14 +24,6 @@ import java.util.List;
  * ListNode(int x) { val = x; }
  * }
  */
-class ListNode {
-    int val;
-    ListNode next;
-
-    ListNode(int x) {
-        val = x;
-    }
-}
 
 public class Q2_AddTwoNumbers {
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
