@@ -10,8 +10,8 @@ import java.util.Stack;
  * 左括号必须用相同类型的右括号闭合。
  * 左括号必须以正确的顺序闭合。
  *
- * @author: yhyr
- * @since: 2019/3/25 0025 10:31
+ * @author yhyr
+ * @since 2019/3/25 0025 10:31
  */
 public class Q20_ValidParentheses {
     public boolean isValid(String s) {

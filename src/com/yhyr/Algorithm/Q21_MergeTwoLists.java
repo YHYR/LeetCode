@@ -1,14 +1,13 @@
 package com.yhyr.Algorithm;
 
-import com.sun.org.apache.bcel.internal.generic.LNEG;
 import com.yhyr.Model.ListNode;
 
 /**
  * Subject:
  * 将两个有序链表合并为一个新的有序链表并返回。新链表是通过拼接给定的两个链表的所有节点组成的
  *
- * @author: yhyr
- * @since: 2019/3/25 0025 11:25
+ * @author yhyr
+ * @since 2019/3/25 0025 11:25
  */
 
 public class Q21_MergeTwoLists {
