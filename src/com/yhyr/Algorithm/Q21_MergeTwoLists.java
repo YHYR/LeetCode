@@ -44,11 +44,11 @@ public class Q21_MergeTwoLists {
     public static void main(String[] args) {
         Q21_MergeTwoLists action = new Q21_MergeTwoLists();
         ListNode l1 = new ListNode(0);
-//        ListNode l1_2 = new ListNode(1);
-//        ListNode l1_3 = new ListNode(2);
-//        l1_3.next = null;
-//        l1_2.next = l1_3;
-//        l1.next = l1_2;
+        ListNode l1_2 = new ListNode(1);
+        ListNode l1_3 = new ListNode(2);
+        l1_3.next = null;
+        l1_2.next = l1_3;
+        l1.next = l1_2;
 
         ListNode l2 = new ListNode(1);
         ListNode l2_2 = new ListNode(3);
@@ -56,6 +56,6 @@ public class Q21_MergeTwoLists {
         l2_3.next = null;
         l2_2.next = l2_3;
         l2.next = l2_2;
-        action.mergeTwoLists(l1, null);
+        action.mergeTwoLists(l1, l2);
     }
 }
