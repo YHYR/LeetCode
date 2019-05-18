@@ -19,6 +19,7 @@ mvnw*
 *.iml
 *.ipr
 out
+logs
 
 ### NetBeans ###
 /nbproject/private/
