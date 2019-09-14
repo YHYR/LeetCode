@@ -59,29 +59,29 @@ public class Q15_ThreeSum {
         return resultList;
     }
 
-    private int[] quickSort(int[] nums, int b, int c) {
-        if (b < c) {
-            int middle = partition(nums, b, c);
-            quickSort(nums, b, middle - 1);
-            quickSort(nums, middle + 1, c);
+    private int[] quickSort(int[] nums, int left, int right) {
+        if (left < right) {
+            int middle = partition(nums, left, right);
+            quickSort(nums, left, middle - 1);
+            quickSort(nums, middle + 1, right);
         }
         return nums;
     }
 
-    private int partition(int[] nums, int b, int c) {
-        int key = nums[b];
-        while (b < c) {
-            while (b < c && nums[c] >= key) {
-                c--;
+    private int partition(int[] nums, int left, int right) {
+        int key = nums[left];
+        while (left < right) {
+            while (left < right && nums[right] >= key) {
+                right--;
             }
-            nums[b] = nums[c];
-            while (b < c && nums[b] <= key) {
-                b++;
+            nums[left] = nums[right];
+            while (left < right && nums[left] <= key) {
+                left++;
             }
-            nums[c] = nums[b];
+            nums[right] = nums[left];
         }
-        nums[b] = key;
-        return b;
+        nums[left] = key;
+        return left;
     }
 
     public static void main(String[] args) {
