@@ -10,7 +10,7 @@ package com.yhyr.Algorithm;
  * @author yhyr
  * @since 2019/3/28 0028 10:02
  */
-public class Q28_strStr {
+public class Q28_StrStr {
     public int strStr(String haystack, String needle) {
         if (haystack.isEmpty() && needle.isEmpty()) {
             return -1;
@@ -36,7 +36,7 @@ public class Q28_strStr {
     }
 
     public static void main(String[] args) {
-        Q28_strStr action = new Q28_strStr();
+        Q28_StrStr action = new Q28_StrStr();
         String haystack = "a";
         String needle = "a";
         int a = action.strStr(haystack, needle);
