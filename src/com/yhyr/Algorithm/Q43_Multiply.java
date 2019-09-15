@@ -4,6 +4,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
+ * Subject：给定两个以字符串形式表示的非负整数 num1 和 num2，返回 num1 和 num2 的乘积，它们的乘积也表示为字符串形式。
+ *
+ * 解题思路：
+ *  + Step 1，将字符串转换成int数组，整数个位为数组0位
+ *  + Step 2，将每一个位的数字两两相乘，并在后面补零
+ *  + Step 3，将所有乘积结果集相加即为最终结果；相加时需要考虑进位和扩容情况
  * @author yhyr
  * @since 2019/09/15 15:47
  */
