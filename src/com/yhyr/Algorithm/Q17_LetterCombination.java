@@ -3,6 +3,8 @@ package com.yhyr.Algorithm;
 import java.util.*;
 
 /**
+ * Subject:
+ * 给定一个仅包含数字2-9的字符串，返回所有它可能表示的字母组合。数字到字母的映射与电话按键相同。
  * @author yhyr
  * @since 2019/09/15 11:00
  */
@@ -46,5 +48,6 @@ public class Q17_LetterCombination {
     public static void main(String[] args) {
         Q17_LetterCombination action = new Q17_LetterCombination();
         List<String> result = action.letterCombinations("234");
+        result.forEach(System.out::println);
     }
 }
