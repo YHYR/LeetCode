@@ -4,6 +4,7 @@ import com.yhyr.Model.TreeNode;
 
 /**
  * Subject: 给定一个二叉树，找出其最大深度
+ * 
  * @author yhyr
  * @since 2019/09/23 1:03
  */
@@ -12,8 +13,8 @@ public class Q104_BinaryTreeMaxDepth {
         if (root == null) {
             return 0;
         }
-        int leftDepth = 0;
-        int rightDepth = 0;
+        int leftDepth = 1;
+        int rightDepth = 1;
         if (root.left != null) {
             leftDepth = 1 + maxDepth(root.left);
         }
