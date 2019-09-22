@@ -13,14 +13,8 @@ public class Q104_BinaryTreeMaxDepth {
         if (root == null) {
             return 0;
         }
-        int leftDepth = 1;
-        int rightDepth = 1;
-        if (root.left != null) {
-            leftDepth = 1 + maxDepth(root.left);
-        }
-        if (root.right != null) {
-            rightDepth = 1 + maxDepth(root.right);
-        }
+        int leftDepth = 1 + maxDepth(root.left);
+        int rightDepth = 1 + maxDepth(root.right);
         return (leftDepth >= rightDepth) ? leftDepth : rightDepth;
     }
 
