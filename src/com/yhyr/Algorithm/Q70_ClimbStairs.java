@@ -53,8 +53,24 @@ public class Q70_ClimbStairs {
         return second;
     }
 
+    /**
+     * 动态规划
+     * @param n
+     * @return
+     */
+   public int climbStairs2(int n) {
+        int[] nums = new int[n+1];
+        nums[0] = 1;
+        nums[1] = 1;
+        for (int i = 2; i <= n; i++) {
+            nums[i] = nums[i-1] + nums[i-2];
+        }
+        return nums[n];
+   }
+
     public static void main(String[] args) {
         Q70_ClimbStairs action = new Q70_ClimbStairs();
-        System.out.println(action.climbStairs(3));
+//        System.out.println(action.climbStairs(3));
+        System.out.println(action.climbStairs2(3));
     }
 }
