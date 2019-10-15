@@ -1,8 +1,6 @@
 package com.yhyr.Algorithm;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 
 /**
  * Subject:
@@ -53,38 +51,25 @@ public class Q3_LongestSubString {
         }
     }
 
-//    private void getAllSubString(char[] strArray, int begin, int end, List<List<Character>> resultList) {
-//        List<Character> subStrList = new ArrayList<>();
-//        boolean flag = true;
-//
-//        for (int i = begin; i < end; i++) {
-//            subStrList.add(strArray[i]);
-//        }
-//        while (flag && end < strArray.length) {
-//            char next = strArray[end];
-//            for (int i = 0; i < subStrList.size(); i++) {
-//                if (next == subStrList.get(i)) {
-//                    begin = begin + i + 1;
-//                    flag = false;
-//                    break;
-//                }
-//            }
-//
-//            if (flag) {
-//                end = end + 1;
-//                subStrList.add(next);
-//            }
-//        }
-//        resultList.add(subStrList);
-//
-//        if (end < strArray.length) {
-//            getAllSubString(strArray, begin, end, resultList);
-//        }
-//    }
+    private int lengthOfLongestSubstring2(String s) {
+        Set<Character> set = new HashSet<>();
+        int len = 0;
+        int left = 0;
+        int right = 0;
+        while (left < s.length() && right < s.length()) {
+            if (!set.contains(s.charAt(right))) {
+                set.add(s.charAt(right++));
+                len = (len > right - left) ? len : right - left;
+            } else {
+                set.remove(s.charAt(left++));
+            }
+        }
+        return len;
+    }
 
     public static void main(String[] args) {
         Q3_LongestSubString action = new Q3_LongestSubString();
-        action.lengthOfLongestSubstring("dvdf");
+        System.out.println(action.lengthOfLongestSubstring2("dvdf"));
 
     }
 
